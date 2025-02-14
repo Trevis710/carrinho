@@ -5,7 +5,7 @@ import ItemPage from './ItemPage.jsx';
 import { items } from '../static-data';
 
 const App = () => {
-  const [activeTab, setActiveTab] = useState('itens');
+  const [activeTab, setActiveTab] = useState('items');
   const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
@@ -27,7 +27,7 @@ const App = () => {
 
 const Content = ({ tab, onAddToCart }) => {
   switch (tab) {
-    case 'itens':
+    case 'items':
       return <ItemPage items={items} onAddToCart={onAddToCart} />;
     case 'cart':
       return <span>the cart</span>;
@@ -38,4 +38,3 @@ const Content = ({ tab, onAddToCart }) => {
 
 export default App;
 
-//aula 11 6:37

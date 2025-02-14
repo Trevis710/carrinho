@@ -1,4 +1,53 @@
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
+.Item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.Item-image{
+    width: 64px;
+    height: 64px;
+    border: 1px  solid #ccc;
+    margin-left: 10px;
+    margin-right: 5px;
+    float: left;
+}
+
+.Item-title{
+    font-weight: bold;
+    margin-bottom: 0.4em;
+}
+
+.Item-price{
+    text-align: right;
+    font-size: 18px;
+    color: #555;
+}
+.Item-addToCart{
+    margin-bottom: 5px;
+    font-size: 14px;
+    border: 2px solid #FFAA3F;
+    background-color: #ffffff73;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.Item-addToCart:hover{
+    background-color: #FFDDB2;
+}
+
+.Item-addToCart:focus{
+    outline: none;
+}
+
+.Item-left{
+    flex: 1;
+}
+
+.Item-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
