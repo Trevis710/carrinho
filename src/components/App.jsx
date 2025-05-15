@@ -13,6 +13,10 @@ const App = () => {
     setCart(prevCart => [...prevCart, item]);
   }
 
+  function handleRemoveFromCart(itemId) {
+    setCart(cart.filter(item => item.id !== itemId));
+  }
+
   return (
     <div className="App">
       <Nav
@@ -21,20 +25,22 @@ const App = () => {
       />
       <main className="App-content">
         <Content
-         tab={activeTab}
+          tab={activeTab}
           onAddToCart={addToCart}
-          cart={summarizeCart(cart)} />
+          cart={summarizeCart(cart)}
+          onRemoveFromCart={handleRemoveFromCart} // <-- Passe aqui!
+        />
       </main>
     </div>
   );
 }
 
-const Content = ({tab, onAddToCart, cart}) => {
+const Content = ({tab, onAddToCart, cart, onRemoveFromCart}) => {
   switch (tab) {
     case 'items':
       return <ItemPage items={items} onAddToCart={onAddToCart} />;
     case 'cart':
-      return <CartPage items={cart}/>;
+      return <CartPage items={cart} onRemoveFromCart={onRemoveFromCart} />; // <-- Passe aqui!
     default:
       return null;
   }

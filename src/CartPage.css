@@ -1,6 +1,7 @@
 .CartPage-items {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .CartPage-items li {
@@ -24,4 +25,52 @@
 
 .CartItem-removeOne {
     border-right: none;
+}
+
+.CartPage-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f5fa;
+  padding: 1em 2em;
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: 1.1em;
+  color: #333;
+}
+
+.CartPage-item {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  transition: box-shadow 0.2s;
+}
+
+.CartPage-item:hover {
+  box-shadow: 0 4px 16px rgba(134,1,175,0.15);
+}
+
+.CartPage-item button {
+  background: #8601af;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.CartPage-item button:hover {
+  background: #a4508b;
+}
+
+.CartPage-item * {
+  color: #111;
 }

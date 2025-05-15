@@ -1,10 +1,63 @@
-.ItemPage-items{
-    margin: 0;
-    padding: 0;
+.ItemPage-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
 }
 
-.ItemPage-item{
-    list-style: none;
-    margin-bottom: 20px;
-    
+.ItemPage-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5em 2em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 220px;
+  max-width: 260px;
+  transition: box-shadow 0.2s;
+  color: #111; /* <-- cor preta para todo o item */
+}
+
+.ItemPage-item:hover {
+  box-shadow: 0 4px 16px rgba(134,1,175,0.15);
+}
+
+.ItemPage-item .Item-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #111; /* <-- cor preta para o título */
+}
+
+.ItemPage-item .Item-description {
+  font-size: 0.95em;
+  color: #111; /* <-- cor preta para a descrição */
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.ItemPage-item .Item-price {
+  font-size: 1.1em;
+  color: #111; /* <-- cor preta para o preço */
+  margin-bottom: 1em;
+}
+
+.ItemPage-item button {
+  background: #8601af;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ItemPage-item button:hover {
+  background: #a4508b;
 }
